@@ -22,24 +22,7 @@ void main(){
 				matrix* bar = create_matrix(1000,1000);
 				for(int i = 0; i < bar->x*bar->y; i++)bar->elements[i] = i; 
 
-				struct timespec start, end;
-
-    // Starta klockan
-    clock_gettime(CLOCK_MONOTONIC, &start);
-
-    // ... Din kod som ska mätas ...
-    for(volatile int i = 0; i < 1000000; i++);
-
 				void* ptr = matrix_multiply(foo,bar);
-
-				clock_gettime(CLOCK_MONOTONIC, &end);
-
-    // Beräkna skillnaden i mikrosekunder
-    // (sekunder * 1 000 000) + (nanosekunder / 1000)
-    long long diff_us = (end.tv_sec - start.tv_sec) * 1000000LL + 
-                        (end.tv_nsec - start.tv_nsec) / 1000;
-
-    printf("Tid som gått: %lld mikrosekunder\n", diff_us);
 				if(ptr != 0)printf("gick");
 
 				free(ptr);
