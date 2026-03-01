@@ -1,0 +1,1 @@
+/usr/sbin/cc -Wl,--dependency-file=CMakeFiles/lin-alg.dir/link.d "CMakeFiles/lin-alg.dir/src/main.c.o" -o lin-alg

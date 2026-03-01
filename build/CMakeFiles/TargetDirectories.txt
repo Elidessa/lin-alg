@@ -1,0 +1,3 @@
+/home/elibra/c/lin-alg/build/CMakeFiles/lin-alg.dir
+/home/elibra/c/lin-alg/build/CMakeFiles/edit_cache.dir
+/home/elibra/c/lin-alg/build/CMakeFiles/rebuild_cache.dir
