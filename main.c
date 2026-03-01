@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 typedef struct {
 				int x;
@@ -14,8 +13,10 @@ matrix* matrix_multiply(matrix *mtrx1, matrix *mtrx2);
 int xy_to_index(matrix *mtrx, int x, int y);
 void matrix_factor_multiply(matrix *mtrx, int factor);
 matrix* create_matrix(int x, int y);
+matrix* create_identity_matrix(int size);
 
 void main(){
+				/*
 				matrix* foo = create_matrix(1000,1000);
 				for(int i = 0; i < foo->x*foo->y; i++)foo->elements[i] = i; 
 			
@@ -23,9 +24,11 @@ void main(){
 				for(int i = 0; i < bar->x*bar->y; i++)bar->elements[i] = i; 
 
 				void* ptr = matrix_multiply(foo,bar);
-				if(ptr != 0)printf("gick");
+				if(ptr != NULL)printf("gick");
 
 				free(ptr);
+				*/
+				print_matrix(create_identity_matrix(4));
 
 }
 
@@ -36,7 +39,7 @@ void print_matrix(matrix* mtrx){
 				}
 }
 matrix* matrix_multiply(matrix *mtrx1, matrix *mtrx2){
-			if(mtrx1->x != mtrx2->y) return 0;	
+			if(mtrx1->x != mtrx2->y) return NULL;	
 
       matrix *retptr = create_matrix(mtrx2->x,mtrx1->y); 
 
@@ -77,6 +80,19 @@ matrix* create_matrix(int x, int y){
 				matrix* retptr = (matrix*)malloc(sizeof(matrix)+x*y*sizeof(int));
 				retptr->x = x;
 				retptr->y = y;
+
+				return retptr;
+}
+matrix* create_identity_matrix(int size){
+				if(size == 0)return NULL;
+
+				matrix* retptr = create_matrix(size,size);
+
+				for(int i = 0; i < size*size; i++){
+								retptr->elements[i] = 0;
+								if(i%(size+1) == 0)retptr->elements[i] = 1;
+				}
+
 
 				return retptr;
 }
