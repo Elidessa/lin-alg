@@ -2,29 +2,31 @@
 #include <stdlib.h>
 #include "main.h"
 
+matrix* transpose_matrix(matrix* mtrx);
 
 void main(){
-				/*
-				matrix* foo = create_matrix(1000,1000);
+				matrix* foo = create_matrix(4,4);
 				for(int i = 0; i < foo->x*foo->y; i++)foo->elements[i] = i; 
-			
+
+				transpose_matrix(foo);
+
+			/*
 				matrix* bar = create_matrix(1000,1000);
 				for(int i = 0; i < bar->x*bar->y; i++)bar->elements[i] = i; 
-
-				void* ptr = matrix_multiply(foo,bar);
-				if(ptr != NULL)printf("gick");
-
-				free(ptr);
 				*/
-				print_matrix(create_identity_matrix(4));
 
 }
 
 void print_matrix(matrix* mtrx){
+				for(int i = 0; i < mtrx->x; i++)printf("__");
+				printf("\n");
+
 				for(int i = 0; i < mtrx->y*mtrx->x; i++){
 								printf("%d ",mtrx->elements[i]);
 								if(i % mtrx->x == mtrx->x - 1){ printf("\n");}
 				}
+				for(int i = 0; i < mtrx->x; i++)printf("__");
+				printf("\n");
 }
 matrix* matrix_multiply(matrix *mtrx1, matrix *mtrx2){
 			if(mtrx1->x != mtrx2->y) return NULL;	
@@ -51,7 +53,7 @@ matrix* matrix_multiply(matrix *mtrx1, matrix *mtrx2){
 				return retptr;
 }
 
-int xy_to_index(matrix *mtrx, int x, int y){
+int xy_to_iddex(matrix *mtrx, int x, int y){
 				if(y%2 == 0){
 								return(y*mtrx->x) + (mtrx->x-1) - x;
 				}
@@ -83,4 +85,26 @@ matrix* create_identity_matrix(int size){
 
 
 				return retptr;
+}
+matrix* transpose_matrix(matrix* mtrx){
+				matrix* temp = create_matrix(mtrx->y,mtrx->x);
+				print_matrix(mtrx);
+
+				temp->elements[0] = mtrx->elements[0];
+				temp->elements[temp->x*temp->y-1] = mtrx->elements[temp->x*temp->y-1];
+
+				for(int i = 1; i < mtrx->x*mtrx->y-1; i++){
+								
+								temp->elements[i] = mtrx->elements[(i*mtrx->x)%((mtrx->x*mtrx->y)-1)];
+				}
+				printf("\n");
+				print_matrix(temp);
+
+
+
+				return temp;
+				
+
+
+
 }
