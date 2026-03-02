@@ -2,19 +2,16 @@
 #include <stdlib.h>
 #include "main.h"
 
-matrix* transpose_matrix(matrix* mtrx);
 
-void main(){
-				matrix* foo = create_matrix(4,4);
+int main(int argc, char** argv){
+
+				int x = (int)(*argv[1]-48);
+				matrix* foo = create_matrix(x,x);
 				for(int i = 0; i < foo->x*foo->y; i++)foo->elements[i] = i; 
 
-				transpose_matrix(foo);
+				matrix* foo_t = transpose_matrix(foo);
 
-			/*
-				matrix* bar = create_matrix(1000,1000);
-				for(int i = 0; i < bar->x*bar->y; i++)bar->elements[i] = i; 
-				*/
-
+				return 0;
 }
 
 void print_matrix(matrix* mtrx){
@@ -88,7 +85,6 @@ matrix* create_identity_matrix(int size){
 }
 matrix* transpose_matrix(matrix* mtrx){
 				matrix* temp = create_matrix(mtrx->y,mtrx->x);
-				print_matrix(mtrx);
 
 				temp->elements[0] = mtrx->elements[0];
 				temp->elements[temp->x*temp->y-1] = mtrx->elements[temp->x*temp->y-1];
@@ -97,14 +93,7 @@ matrix* transpose_matrix(matrix* mtrx){
 								
 								temp->elements[i] = mtrx->elements[(i*mtrx->x)%((mtrx->x*mtrx->y)-1)];
 				}
-				printf("\n");
 				print_matrix(temp);
 
-
-
 				return temp;
-				
-
-
-
 }
