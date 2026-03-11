@@ -3,7 +3,7 @@
 
 CMakeFiles/lin-alg.dir/src/main.c.o
  /home/elibra/c/lin-alg/src/main.c
- /home/elibra/c/lin-alg/src/main.h
+ /home/elibra/c/lin-alg/src/matrix.h
  /usr/include/alloca.h
  /usr/include/bits/atomic_wide_counter.h
  /usr/include/bits/byteswap.h

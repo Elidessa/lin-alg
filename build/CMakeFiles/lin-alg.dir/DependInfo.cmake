@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/elibra/c/lin-alg/src/main.c" "CMakeFiles/lin-alg.dir/src/main.c.o" "gcc" "CMakeFiles/lin-alg.dir/src/main.c.o.d"
+  "/home/elibra/c/lin-alg/src/matrix.c" "CMakeFiles/lin-alg.dir/src/matrix.c.o" "gcc" "CMakeFiles/lin-alg.dir/src/matrix.c.o.d"
   "" "lin-alg" "gcc" "CMakeFiles/lin-alg.dir/link.d"
   )
 

@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lin-alg.dir/link.d"
   "CMakeFiles/lin-alg.dir/src/main.c.o"
   "CMakeFiles/lin-alg.dir/src/main.c.o.d"
+  "CMakeFiles/lin-alg.dir/src/matrix.c.o"
+  "CMakeFiles/lin-alg.dir/src/matrix.c.o.d"
   "lin-alg"
   "lin-alg.pdb"
 )

@@ -85,12 +85,12 @@ clean: CMakeFiles/lin-alg.dir/clean
 CMakeFiles/lin-alg.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lin-alg.dir/build.make CMakeFiles/lin-alg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lin-alg.dir/build.make CMakeFiles/lin-alg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/elibra/c/lin-alg/build/CMakeFiles --progress-num=1,2 "Built target lin-alg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/elibra/c/lin-alg/build/CMakeFiles --progress-num=1,2,3 "Built target lin-alg"
 .PHONY : CMakeFiles/lin-alg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lin-alg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/elibra/c/lin-alg/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/elibra/c/lin-alg/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lin-alg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/elibra/c/lin-alg/build/CMakeFiles 0
 .PHONY : CMakeFiles/lin-alg.dir/rule
@@ -102,7 +102,7 @@ lin-alg: CMakeFiles/lin-alg.dir/rule
 # codegen rule for target.
 CMakeFiles/lin-alg.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lin-alg.dir/build.make CMakeFiles/lin-alg.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/elibra/c/lin-alg/build/CMakeFiles --progress-num=1,2 "Finished codegen for target lin-alg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/elibra/c/lin-alg/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target lin-alg"
 .PHONY : CMakeFiles/lin-alg.dir/codegen
 
 # clean rule for target.
